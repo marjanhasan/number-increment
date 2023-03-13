@@ -1,7 +1,8 @@
 let count = 0;
 const num = document.getElementById('number');
 const initial = () => {
-    count = localStorage.getItem('num');
+    loc = localStorage.getItem('num');
+    loc === null ? (count = 0) : (count = loc);
     num.innerText = count;
 }
 const add = () => {
@@ -9,9 +10,9 @@ const add = () => {
     localStorage.setItem('num',count);
 }
 const clr = () => {
+    localStorage.clear();
     count = 0;
     num.innerText = count;
-    localStorage.setItem('num',count);
 }
 const minus = () => {
     num.innerText = --count;
