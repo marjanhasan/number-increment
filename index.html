@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>number-increment</title>
 </head>
-<body>
-    <h1>1</h1>
-    <button>+</button>
-    <button>Clear</button>
-    <button>-</button>
+<body onload="initial()">
+    <h1 id="number">0</h1>
+    <button onclick="add()">+</button>
+    <button onclick="clr()">Clear</button>
+    <button onclick="minus()">-</button>
     <script src="index.js"></script>
 </body>
 </html>
